@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Voices - Climate Equity Map NYC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vbu4mjm.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-brand">CLIMATE EQUITY MAP</a>
+            
+            <div class="nav-right">
+                <a href="community-voices.html" class="current">COMMUNITY VOICES</a>
+                <a href="take-action.html">TAKE ACTION</a>
+                <a href="learn.html">LEARN</a>
+            </div>
+            
+            <button class="hamburger-menu" id="hamburger-btn" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-title">Menu</span>
+            <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="community-voices.html" class="current">COMMUNITY VOICES</a>
+            <a href="take-action.html">TAKE ACTION</a>
+            <a href="learn.html">LEARN</a>
+        </nav>
+    </div>
+
+    <!-- Community Voices Hero -->
+    <section class="cv-hero">
+    <div class="cv-hero-background">
+        <img src="images/Group 28.svg" alt="" class="hero-bg-svg">
+    </div>
+    
+    <!-- Tagline overlaid on the background -->
+    <div class="cv-tagline-container">
+        <h1 class="cv-tagline">Climate resilience should be for everyone, not just those who can <em>afford it</em></h1>
+    </div>
+</section>
+
+<!-- Description as separate section below -->
+<section class="cv-description-section">
+    <div class="cv-description-container">
+        <p>As climate change intensifies, low-income and BIPOC communities disproportionately bear the burden of environmental hazards while often having the least access to green infrastructure and climate resilience resources.</p>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="cv-map-section">
+    <!-- existing map content -->
+
+                <div class="cv-map-container">
+                    <!-- Legend -->
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot heat-vulnerability"></span>
+                            <span class="legend-label">Heat Vulnerability</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot flood-risk"></span>
+                            <span class="legend-label">Flood Risk</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot existing-green"></span>
+                            <span class="legend-label">Existing Green Infrastructure</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot hypothetical-green"></span>
+                            <span class="legend-label">Hypothetical Green Infrastructure</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot community-stories"></span>
+                            <span class="legend-label">Community Stories</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Image -->
+                    <img src="images/Frame.svg" alt="NYC Community Climate Map" class="cv-map-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const body = document.body;
+
+            function openMobileMenu() {
+                hamburgerBtn.classList.add('active');
+                mobileMenu.classList.add('active');
+                mobileOverlay.classList.add('active');
+                body.classList.add('menu-open');
+            }
+
+            function closeMobileMenu() {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', function() {
+                    if (mobileMenu.classList.contains('active')) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            }
+
+            if (closeMenuBtn) {
+                closeMenuBtn.addEventListener('click', closeMobileMenu);
+            }
+
+            if (mobileOverlay) {
+                mobileOverlay.addEventListener('click', closeMobileMenu);
+            }
+
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && mobileMenu && mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

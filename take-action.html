@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Action - Climate Equity Map NYC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vbu4mjm.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-brand">CLIMATE EQUITY MAP</a>
+            
+            <div class="nav-right">
+                <a href="community-voices.html">COMMUNITY VOICES</a>
+                <a href="take-action.html" class="current">TAKE ACTION</a>
+                <a href="learn.html">LEARN</a>
+            </div>
+            
+            <button class="hamburger-menu" id="hamburger-btn" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-title">Menu</span>
+            <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="community-voices.html">COMMUNITY VOICES</a>
+            <a href="take-action.html" class="current">TAKE ACTION</a>
+            <a href="learn.html">LEARN</a>
+        </nav>
+    </div>
+
+    <!-- Take Action Hero Section -->
+    <section class="ta-hero">
+        <div class="ta-container">
+            <!-- Speech Bubbles Row -->
+            <div class="ta-speech-bubbles-row">
+                <!-- Left Speech Bubble -->
+                <div class="ta-speech-bubble">
+                    <img src="images/takeaction1.svg" alt="Speech bubble" class="ta-speech-bubble-svg">
+                    <div class="ta-speech-bubble-content">
+                        <h1 class="ta-speech-bubble-title">Take Action</h1>
+                    </div>
+                </div>
+
+                <!-- Right Speech Bubble -->
+                <div class="ta-speech-bubble">
+                    <img src="images/Group 32.svg" alt="Speech bubble" class="ta-speech-bubble-svg">
+                    <div class="ta-speech-bubble-content">
+                        <!-- Empty or can add additional content -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="ta-description">
+                <p>Climate justice requires collective action. Whether you're a resident seeking resources, an advocate organizing your community, or a policymaker looking to drive change—find the tools and information you need here.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <div class="ta-main-container">
+        <main class="ta-content-area">
+            
+            <!-- For Residents Section -->
+            <section id="residents" class="ta-section">
+                <h2 class="ta-section-title">For Residents</h2>
+                <p class="ta-section-intro">Access local resources, stay informed about community meetings, and prepare your household for climate emergencies.</p>
+                
+                <div class="ta-cards-grid">
+                    <div class="ta-card">
+                        <h3>Local Resources</h3>
+                        <p>Find cooling centers, green spaces, emergency services, and community organizations in your neighborhood.</p>
+                        <ul class="ta-resource-list">
+                            <li><a href="https://portal.311.nyc.gov/article/?kanumber=KA-02663" target="_blank">NYC Cooling Center Locator</a></li>
+                            <li><a href="https://www.nycgovparks.org/greenthumb/" target="_blank">Community Garden Directory</a></li>
+                            <li><a href="https://citizensclimatelobby.org/chapters/NY_NYC/" target="_blank">Local Climate Action Groups</a></li>
+                            <li><a href="https://www.nyserda.ny.gov/All-Programs/Residential-Energy-Assessment-Programs/Get-a-No-Cost-Home-Energy-Assessment" target="_blank">Free Home Energy Assessments</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ta-card">
+                        <h3>Meeting Calendar</h3>
+                        <p>Stay connected with upcoming community board meetings, town halls, and climate action events.</p>
+                        <div class="ta-calendar-preview">
+                            <div class="calendar-event">
+                                <span class="event-date">Oct 15</span>
+                                <span class="event-title">Community Board 3 - Climate Resilience</span>
+                            </div>
+                            <div class="calendar-event">
+                                <span class="event-date">Oct 22</span>
+                                <span class="event-title">Green Infrastructure Town Hall</span>
+                            </div>
+                            <div class="calendar-event">
+                                <span class="event-date">Nov 3</span>
+                                <span class="event-title">Emergency Preparedness Workshop</span>
+                            </div>
+                        </div>
+                        <a href="#" class="ta-link-button">View Full Calendar</a>
+                    </div>
+                    
+                    <div class="ta-card">
+                        <h3>Emergency Preparedness</h3>
+                        <p>Get your household ready for extreme heat, flooding, and other climate-related emergencies.</p>
+                        <ul class="ta-resource-list">
+                            <li><a href="#">Heat Wave Safety Guide</a></li>
+                            <li><a href="#">Flood Preparedness Checklist</a></li>
+                            <li><a href="#">Emergency Supply Kit Guide</a></li>
+                            <li><a href="#">Know Your Evacuation Zone</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- For Advocates Section -->
+            <section id="advocates" class="ta-section">
+                <h2 class="ta-section-title">For Advocates</h2>
+                <p class="ta-section-intro">Access data, tools, and resources to organize your community and advocate for climate justice.</p>
+                
+                <div class="ta-cards-grid">
+                    <div class="ta-card">
+                        <h3>Data Downloads</h3>
+                        <p>Download geographic and demographic data to support your advocacy work and grant applications.</p>
+                        <ul class="ta-resource-list">
+                            <li><a href="#">Heat Vulnerability Index (CSV)</a></li>
+                            <li><a href="#">Flood Risk Maps (GeoJSON)</a></li>
+                            <li><a href="#">Green Infrastructure Inventory</a></li>
+                            <li><a href="#">Demographic Data by Neighborhood</a></li>
+                            <li><a href="#">API Documentation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ta-card">
+                        <h3>Organizing Toolkit</h3>
+                        <p>Templates, guides, and best practices for building climate justice campaigns in your community.</p>
+                        <ul class="ta-resource-list">
+                            <li><a href="#">Community Organizing Guide (PDF)</a></li>
+                            <li><a href="#">Town Hall Planning Template</a></li>
+                            <li><a href="#">Social Media Toolkit</a></li>
+                            <li><a href="#">Grant Writing Resources</a></li>
+                            <li><a href="#">Coalition Building Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ta-card">
+                        <h3>Policy Solutions</h3>
+                        <p>Evidence-based policy solutions to advance climate equity in NYC.</p>
+                        <ul class="ta-resource-list">
+                            <li><a href="#">Green Infrastructure Expansion Plan</a></li>
+                            <li><a href="#">Cooling Center Standards</a></li>
+                            <li><a href="#">Equitable Climate Budgeting</a></li>
+                            <li><a href="#">Community-Led Adaptation Framework</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- For Policymakers Section -->
+            <section id="policymakers" class="ta-section">
+                <h2 class="ta-section-title">For Policymakers</h2>
+                <p class="ta-section-intro">Data-driven tools and analysis to inform equitable climate policy and investment decisions.</p>
+                
+                <div class="ta-cards-grid">
+                    <div class="ta-card">
+                        <h3>Priority Area Maps</h3>
+                        <p>Interactive maps identifying neighborhoods with the highest need for climate resilience investments.</p>
+                        <div class="ta-map-preview">
+                            <img src="images/priority-areas-preview.png" alt="Priority Areas Map Preview">
+                        </div>
+                        <a href="#" class="ta-link-button">Open Interactive Map</a>
+                    </div>
+                    
+                    <div class="ta-card">
+                        <h3>Cost-Benefit Analysis</h3>
+                        <p>Economic analysis of climate resilience investments and their returns.</p>
+                        <ul class="ta-resource-list">
+                            <li><a href="#">Green Infrastructure ROI Study</a></li>
+                            <li><a href="#">Heat Mitigation Cost Analysis</a></li>
+                            <li><a href="#">Flood Prevention Investment Models</a></li>
+                            <li><a href="#">Public Health Cost Savings</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ta-card">
+                        <h3>Implementation Guides</h3>
+                        <p>Step-by-step guides for implementing equitable climate resilience programs.</p>
+                        <ul class="ta-resource-list">
+                            <li><a href="#">Community Engagement Framework</a></li>
+                            <li><a href="#">Green Infrastructure Deployment Guide</a></li>
+                            <li><a href="#">Equity Assessment Toolkit</a></li>
+                            <li><a href="#">Performance Metrics Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Decision Makers Section -->
+            <section id="contact" class="ta-section">
+                <h2 class="ta-section-title">Contact Decision Makers</h2>
+                <p class="ta-section-intro">Make your voice heard by reaching out to elected officials and agency leaders.</p>
+                
+                <div class="ta-contact-grid">
+                    <div class="ta-contact-card">
+                        <h3>Find Your Representatives</h3>
+                        <p>Enter your address to find your City Council member, State Assembly representative, and other elected officials.</p>
+                        <div class="ta-address-lookup">
+                            <input type="text" placeholder="Enter your address" class="ta-input">
+                            <button class="ta-button">Find Representatives</button>
+                        </div>
+                    </div>
+                    
+                    <div class="ta-contact-card">
+                        <h3>Key Agencies</h3>
+                        <ul class="ta-agency-list">
+                            <li>
+                                <strong>NYC Department of Environmental Protection</strong>
+                                <a href="mailto:info@dep.nyc.gov">info@dep.nyc.gov</a>
+                            </li>
+                            <li>
+                                <strong>NYC Emergency Management</strong>
+                                <a href="mailto:info@oem.nyc.gov">info@oem.nyc.gov</a>
+                            </li>
+                            <li>
+                                <strong>NYC Parks Department</strong>
+                                <a href="mailto:commissioner@parks.nyc.gov">commissioner@parks.nyc.gov</a>
+                            </li>
+                            <li>
+                                <strong>Mayor's Office of Climate & Environmental Justice</strong>
+                                <a href="mailto:climate@cityhall.nyc.gov">climate@cityhall.nyc.gov</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ta-action-templates">
+                    <h3>Email Templates</h3>
+                    <p>Use these templates to contact decision makers about climate justice issues:</p>
+                    <div class="ta-template-grid">
+                        <a href="#" class="ta-template-link">Green Infrastructure Investment</a>
+                        <a href="#" class="ta-template-link">Cooling Center Expansion</a>
+                        <a href="#" class="ta-template-link">Flood Protection</a>
+                        <a href="#" class="ta-template-link">Air Quality Improvement</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>On this page:</h3>
+                <h4>Take Action Resources</h4>
+                <ul class="sidebar-nav">
+                    <li><a href="#residents" class="nav-link active">For Residents</a></li>
+                    <li><a href="#advocates" class="nav-link">For Advocates</a></li>
+                    <li><a href="#policymakers" class="nav-link">For Policymakers</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Decision Makers</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const body = document.body;
+
+            function openMobileMenu() {
+                hamburgerBtn.classList.add('active');
+                mobileMenu.classList.add('active');
+                mobileOverlay.classList.add('active');
+                body.classList.add('menu-open');
+            }
+
+            function closeMobileMenu() {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', function() {
+                    if (mobileMenu.classList.contains('active')) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            }
+
+            if (closeMenuBtn) {
+                closeMenuBtn.addEventListener('click', closeMobileMenu);
+            }
+
+            if (mobileOverlay) {
+                mobileOverlay.addEventListener('click', closeMobileMenu);
+            }
+
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && mobileMenu && mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Sidebar navigation
+            const sidebarNavLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+
+            sidebarNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                    
+                    sidebarNavLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Update active link on scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('.ta-section');
+                const scrollPos = window.scrollY + 100;
+
+                sections.forEach(section => {
+                    const top = section.offsetTop;
+                    const bottom = top + section.offsetHeight;
+                    const id = section.getAttribute('id');
+                    
+                    if (scrollPos >= top && scrollPos < bottom) {
+                        sidebarNavLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
